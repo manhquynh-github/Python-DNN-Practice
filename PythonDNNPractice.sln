@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonDNNPractice", "PythonDNNPractice\PythonDNNPractice.pyproj", "{836A7D78-C358-4C54-99B5-E1E905D84FC0}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonKerasPractice", "PythonKerasPractice\PythonKerasPractice.pyproj", "{2DCB7528-3E6B-4A71-BED6-462B28C7C93A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{836A7D78-C358-4C54-99B5-E1E905D84FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836A7D78-C358-4C54-99B5-E1E905D84FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DCB7528-3E6B-4A71-BED6-462B28C7C93A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DCB7528-3E6B-4A71-BED6-462B28C7C93A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA0F680E-9B4B-4B4C-B722-40D04F8505F9}
+	EndGlobalSection
+EndGlobal
