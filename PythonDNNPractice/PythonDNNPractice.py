@@ -1,6 +1,7 @@
 # # #
 # Tutorial from: 
 # http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/
+# This uses CPU only so be aware of your computer specifications
 # # #
 
 import sklearn
@@ -18,9 +19,12 @@ np.random.seed(0)
 # X, y = sklearn.datasets.make_moons(200, noise=0.20)
 
 # Custom dataset
-X = []
+# This dataset has 2 classes:
+# [0]: y = x
+# [1]: y = x^2
 
 # WARNING: more than 20 datas can end up PC freezing
+X = []
 for i in range(5):
     X.append([i, i, 0])
     X.append([i, i**2, 1])
