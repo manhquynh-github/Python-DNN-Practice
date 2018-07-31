@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2dcb7528-3e6b-4a71-bed6-462b28c7c93a</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>test_model.py</StartupFile>
+    <StartupFile>predict_model.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="predict_model.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonKerasPractice.py" />
     <Compile Include="test_model.py">
       <SubType>Code</SubType>

@@ -1,6 +1,6 @@
 # # #
 # Build simple custom deep neural network with Keras 
-# (back-ended by Tensorflow 1.8.0)
+# (using Tensorflow 1.8.0 backend)
 # Please be sure that both CPU and GPU are used.
 # Tested with Intel Core i7 & NVIDIA GeForce 840M
 # Result: accuracy = 99.85%
