@@ -44,8 +44,20 @@ For those machines that have CPU only, go to __(Step 2A)__, those machines that 
 8. Install Tensorflow
     - If you installed CUDA Toolkit 9.0, enter the command below\
     `pip install --ignore-installed --upgrade tensorflow-gpu`
-    - Otherwise, you have to build the Tensorflow binaries on your own *___OR__* find compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel)
-    - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
-    - Enter the command below to install Tensorflow with __GPU__ support.\
-    `pip install --ignore-installed --upgrade [the link]` 
+    - Otherwise, you have to build the Tensorflow binaries on your own *___OR__* find compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
+        - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
+        - Enter the command below to install Tensorflow with __GPU__ support.\
+        `pip install --ignore-installed --upgrade [the link]` 
     - Wait for the installation to finish then jump to Step 3.
+### Step 3. Verify Tensorflow installation
+1. From the current Anaconda Prompt enter the commands below:\
+`python
+import tensorflow as tf
+hello = tf.constant('Hello, TensorFlow!')
+sess = tf.Session()
+print(sess.run(hello))`
+- The `python` line is to invoke python from shell.
+- The `import tensorflow as tf` is to import tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command. If there is a warning `Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary which was compiled to make use of. You should run normally without any problems, but I recommend you use the correct one.
+- The `hello = tf.constant('Hello, TensorFlow!')` will create a simple variable using Tensorflow.
+- The `sess = tf.Session()` will create a session upon which Tensorflow will operate. If everything is correct, the prompt will tell you about the info of the CPU/GPU it will use. This will take some time to complete.
+- The `print(sess.run(hello))` will print out the value of `hello` which is supposed to be `b'Hello, TensorFlow!'`.
