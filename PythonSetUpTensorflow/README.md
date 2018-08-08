@@ -72,4 +72,4 @@ print(sess.run(hello))
 `pip install keras`
 2. Wait for the installation to complete.
 
-*__Please cite this repository if you're going to use my code in your work. Thank you.__*
+*__Please cite this repository if you find this helpful in your work. Thank you.__*
