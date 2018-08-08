@@ -19,7 +19,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 - For machines that have CPU only or need CPU version only, go to [Step 2A](#step-2a).
 - For machines that have NVIDIA GPU go to [Step 2B](#step-2b).
 #### Step 2A
-1. Open Anaconda Prompt (just search in the Start menu). *Note: This promt is different from normal Command Prompt (cmd)*
+1. Open Anaconda Prompt (just search in the Start menu). *Note: This prompt is different from normal Command Prompt (cmd)*
 2. Enter the command below to create an *environment* with the name `tensorflow` or your own choice.\
 `conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder`
 3. Enter the command below to activate the *environment*.\
