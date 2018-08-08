@@ -24,8 +24,9 @@ In this project, I will guide you how to set up the environment for Python on Wi
 `conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder`
 3. Enter the command below to activate the *environment*.\
 `activate tensorflow`
-4. Enter the command below to install __Tensorflow with CPU support__ and wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).\
+4. Enter the command below to install __Tensorflow with CPU support__.\
 `pip install --ignore-installed --upgrade tensorflow`
+5. Wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).
 #### Step 2B
 1. Check for supported GPU in [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda-gpus). Make sure you find your GPU model in the lists and the __Compute Capability__ must be at least 3.0 or else you're out of luck.
 2. Download [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads). Current Tensorflow only supports CUDA Toolkit 9.0. For different version, you will need to re-compile Tensorflow from the source. I currently use version 9.2.
@@ -49,7 +50,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
         - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
         - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
         `pip install --ignore-installed --upgrade [the link]` 
-    - Wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).
+9. Wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).
 ### Step 3. Verify Tensorflow installation
 1. From the current Anaconda Prompt, enter the command below to invoke Python:\
 `python`
