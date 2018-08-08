@@ -5,6 +5,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 
 > [Keras](https://keras.io/) is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result with the least possible delay is key to doing good research.
 ## Reference
+- [Install TensorFlow on Windows](https://www.tensorflow.org/install/install_windows)
 - [github.com/antoniosehk/keras-tensorflow-windows-installation](https://github.com/antoniosehk/keras-tensorflow-windows-installation)
 - [github.com/fo40225/tensorflow-windows-wheel](https://github.com/fo40225/tensorflow-windows-wheel)
 ## Steps
@@ -15,7 +16,7 @@ a. If you want Microsoft Visual Studio to handle Anaconda and Python components,
 
 b. Otherwise, you can just download [Anaconda](https://www.anaconda.com/download/) (Python 3.6 version)
 ### Step 2. Install Tensorflow
-For those machines that have CPU only, go to __[Step 2A](#step-2a)__, those machines that have NVIDIA GPU go to __[Step 2B](#step-2b)__
+For those machines that have CPU only or need CPU version only, go to [Step 2A](#step-2a), those machines that have NVIDIA GPU go to [Step 2B](#step-2b)
 #### Step 2A
 1. Open Anaconda Prompt (just search in the Menu Start). *Note: This promt is different from normal Command Prompt (cmd)*
 2. Enter the command below to create an *environment* with the name `tensorflow` or your own choice.\
