@@ -55,13 +55,11 @@ In this project, I will guide you how to set up the environment for Python on Wi
 `python`
 2. Enter the commands below to verify Tensorflow:
 ```
-python
 import tensorflow as tf
 hello = tf.constant('Hello, TensorFlow!')
 sess = tf.Session()
 print(sess.run(hello))
 ```
-- The `python` line is to invoke python from shell.
 - The `import tensorflow as tf` is to import Tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command. If there is a warning `Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
 - The `hello = tf.constant('Hello, TensorFlow!')` will create a simple variable using Tensorflow.
 - The `sess = tf.Session()` will create a session upon which Tensorflow will operate. If everything is correct, the prompt will tell you about the info of the CPU/GPU it will use. This will take some time to complete.
