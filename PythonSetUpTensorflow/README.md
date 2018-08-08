@@ -55,16 +55,16 @@ In this project, I will guide you how to set up the environment for Python on Wi
 1. From the current Anaconda Prompt, enter the command below to invoke Python:\
 `python`
 2. Enter the commands below to verify Tensorflow:
-```
-import tensorflow as tf
-hello = tf.constant('Hello, TensorFlow!')
-sess = tf.Session()
-print(sess.run(hello))
-```
-- The `import tensorflow as tf` is to import Tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command. If there is a warning `Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
-- The `hello = tf.constant('Hello, TensorFlow!')` will create a simple variable using Tensorflow.
-- The `sess = tf.Session()` will create a session upon which Tensorflow will operate. If everything is correct, the prompt will tell you about the info of the CPU/GPU it will use. This will take some time to complete.
-- The `print(sess.run(hello))` will print out the value of `hello` which is supposed to be `b'Hello, TensorFlow!'`.
+    ```
+    import tensorflow as tf
+    hello = tf.constant('Hello, TensorFlow!')
+    sess = tf.Session()
+    print(sess.run(hello))
+    ```
+    - The `import tensorflow as tf` is to import Tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command. If there is a warning `Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
+    - The `hello = tf.constant('Hello, TensorFlow!')` will create a simple variable using Tensorflow.
+    - The `sess = tf.Session()` will create a session upon which Tensorflow will operate. If everything is correct, the prompt will tell you about the info of the CPU/GPU it will use. This will take some time to complete.
+    - The `print(sess.run(hello))` will print out the value of `hello` which is supposed to be `b'Hello, TensorFlow!'`.
 3. Enter the command below to exit python from shell.\
 `exit()`
 ### Step 4. Install Keras
