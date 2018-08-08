@@ -4,7 +4,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 > [TensorFlow™](https://www.tensorflow.org/) is an open source software library for high performance numerical computation. Its flexible architecture allows easy deployment of computation across a variety of platforms (CPUs, GPUs, TPUs), and from desktops to clusters of servers to mobile and edge devices. Originally developed by researchers and engineers from the Google Brain team within Google’s AI organization, it comes with strong support for machine learning and deep learning and the flexible numerical computation core is used across many other scientific domains.
 
 > [Keras](https://keras.io/) is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result with the least possible delay is key to doing good research.
-## Reference
+## References
 - [Install TensorFlow on Windows](https://www.tensorflow.org/install/install_windows)
 - [github.com/antoniosehk/keras-tensorflow-windows-installation](https://github.com/antoniosehk/keras-tensorflow-windows-installation)
 - [github.com/fo40225/tensorflow-windows-wheel](https://github.com/fo40225/tensorflow-windows-wheel)
