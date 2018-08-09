@@ -24,7 +24,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 `conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder`
 3. Enter the command below to activate the *environment*.\
 `activate tensorflow`
-4. Enter the command below to install __Tensorflow with CPU support__.\
+4. Enter the command below to install __Tensorflow with CPU support__. This will automatically select an official version from Google and install it for you.\
 `pip install --ignore-installed --upgrade tensorflow`
 - If you've installed Tensorflow but failed to import from [Step 3](#step-3-verify-tensorflow-installation), you have to re-build the binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
     - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
