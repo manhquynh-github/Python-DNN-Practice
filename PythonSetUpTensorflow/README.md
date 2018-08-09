@@ -26,6 +26,10 @@ In this project, I will guide you how to set up the environment for Python on Wi
 `activate tensorflow`
 4. Enter the command below to install __Tensorflow with CPU support__.\
 `pip install --ignore-installed --upgrade tensorflow`
+- If you've installed Tensorflow but failed to import from [Step 3](#step-3-verify-tensorflow-installation), you have to re-build the binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
+    - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
+    - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
+        `pip install --ignore-installed --upgrade [the link]` 
 5. Wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).
 #### Step 2B
 1. Check for supported GPU in [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda-gpus). Make sure you find your GPU model in the lists and the __Compute Capability__ must be at least 3.0 or else you're out of luck.
@@ -46,7 +50,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 8. Install __Tensorflow with GPU support__.
     - If you installed CUDA Toolkit 9.0, enter the command below\
     `pip install --ignore-installed --upgrade tensorflow-gpu`
-    - Otherwise, you have to build the Tensorflow binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
+    - Otherwise, you have to re-build the Tensorflow binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
         - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
         - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
         `pip install --ignore-installed --upgrade [the link]` 
@@ -61,7 +65,9 @@ In this project, I will guide you how to set up the environment for Python on Wi
     sess = tf.Session()
     print(sess.run(hello))
     ```
-    - The `import tensorflow as tf` is to import Tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command. If there is a warning __`Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`__. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
+    - The `import tensorflow as tf` is to import Tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command.
+        - If there is a warning __`Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`__. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
+        - If you failed with an error __`ImportError: DLL load failed`__, go back to [Step 2A](#step-2a).4 for more instructions.
     - The `hello = tf.constant('Hello, TensorFlow!')` will create a simple variable using Tensorflow.
     - The `sess = tf.Session()` will create a session upon which Tensorflow will operate. If everything is correct, the prompt will tell you about the info of the CPU/GPU it will use. This will take some time to complete.
     - The `print(sess.run(hello))` will print out the value of `hello` which is supposed to be `b'Hello, TensorFlow!'`.
