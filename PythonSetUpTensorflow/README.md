@@ -20,7 +20,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 #### Step 2A
 1. Open Anaconda Prompt (just search in the Start menu). *Note: This prompt is different from normal Command Prompt (cmd)*
 2. Enter the command below to create an *environment* with the name `tensorflow` or your own choice.\
-`conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder`
+`conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder cython`
 3. Enter the command below to activate the *environment*.\
 `activate tensorflow`
 4. Enter the command below to install __Tensorflow with CPU support__. This will automatically select an official version from Google and install it for you.\
@@ -43,7 +43,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 5. Check if __PATH__ is added. Close all prompts then open a new Anaconda Prompt, enter the command below and see if the path is in the output result.\
 `echo %PATH%`
 6. Enter the command below to create an *environment* with the name `tensorflow` or your own choice.\
-`conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder`
+`conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder cython`
 7. Enter the command below to activate the *environment*.\
 `activate tensorflow`
 8. Install __Tensorflow with GPU support__.
