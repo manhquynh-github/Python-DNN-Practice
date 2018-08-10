@@ -10,10 +10,9 @@ In this project, I will guide you how to set up the environment for Python on Wi
 - [github.com/fo40225/tensorflow-windows-wheel](https://github.com/fo40225/tensorflow-windows-wheel)
 ## Steps
 ### Step 1. Install Anaconda and Python 3.6
-- If you want Microsoft Visual Studio to handle Anaconda and Python components, you can use Visual Studio Installer and install these components:
+- If you want Microsoft Visual Studio to handle Anaconda and Python components, you can use Visual Studio Installer and install this component:
     - Anaconda3 32/64-bit (5.1.0)
-    - Python3 32/64-bit (3.6.5)
-
+    
 - Otherwise, you can just download [Anaconda](https://www.anaconda.com/download/) (Python 3.6 version)
 ### Step 2. Install Tensorflow
 - For machines that have CPU only or need CPU version only, go to [Step 2A](#step-2a).
