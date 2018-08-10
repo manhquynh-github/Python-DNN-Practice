@@ -26,10 +26,10 @@ In this project, I will guide you how to set up the environment for Python on Wi
 `activate tensorflow`
 4. Enter the command below to install __Tensorflow with CPU support__. This will automatically select an official version from Google and install it for you.\
 `pip install --ignore-installed --upgrade tensorflow`
-- If you've installed Tensorflow but failed to import from [Step 3](#step-3-verify-tensorflow-installation), you have to re-build the binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
-    - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
-    - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
-        `pip install --ignore-installed --upgrade [the link]` 
+    - If you've installed Tensorflow but failed to import from [Step 3](#step-3-verify-tensorflow-installation), you have to re-build the binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
+        - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
+        - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
+            `pip install --ignore-installed --upgrade [the link]` 
 5. Wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).
 #### Step 2B
 1. Check for supported GPU in [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda-gpus). Make sure you find your GPU model in the lists and the __Compute Capability__ must be at least 3.0 or else you're out of luck.
