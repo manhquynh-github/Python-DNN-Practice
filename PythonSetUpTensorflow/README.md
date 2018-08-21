@@ -44,7 +44,7 @@ A [conda *environment*](https://conda.io/docs/user-guide/concepts.html#conda-env
         5. Install __Tensorflow with GPU support__.
             - If you installed CUDA Toolkit 9.0, enter the command below\
             `pip install --ignore-installed --upgrade tensorflow-gpu`
-            - Otherwise, you have to re-compile Tensorflow from the source *__OR__* follow this [step](#get-windows-tensorflow-wheel by-fo40225).                
+            - Otherwise, you have to re-compile Tensorflow from the source *__OR__* follow this [step](#get-windows-tensorflow-wheel-by-fo40225).                
 4. Wait for the installation to finish.
 ### Step 3. Verify Tensorflow installation
 1. From the current Anaconda Prompt, enter the command below to invoke Python:\
