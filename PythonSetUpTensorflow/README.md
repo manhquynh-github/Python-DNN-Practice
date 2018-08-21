@@ -15,45 +15,37 @@ In this project, I will guide you how to set up the environment for Python on Wi
     
 - Otherwise, you can just download [Anaconda](https://www.anaconda.com/download/) (Python 3.6 version)
 ### Step 2. Install Tensorflow
-- For machines that have CPU only or need CPU version only, go to [Step 2A](#step-2a).
-- For machines that have NVIDIA GPU go to [Step 2B](#step-2b).
-#### Step 2A
-1. Open Anaconda Prompt (just search in the Start menu). *Note: This prompt is different from normal Command Prompt (cmd)*
-2. Enter the command below to create an *environment* with the name `tensorflow` or your own choice.\
-`conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder cython`
-3. Enter the command below to activate the *environment*.\
-`activate tensorflow`
-4. Enter the command below to install __Tensorflow with CPU support__. This will automatically select an official version from Google and install it for you.\
-`pip install --ignore-installed --upgrade tensorflow`
-    - If you've installed Tensorflow but failed to import from [Step 3](#step-3-verify-tensorflow-installation), you have to re-build the binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
-        - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
-        - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
-            `pip install --ignore-installed --upgrade [the link]` 
-5. Wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).
-#### Step 2B
-1. Check for supported GPU in [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda-gpus). Make sure you find your GPU model in the lists and the __Compute Capability__ must be at least 3.0 or else you're out of luck.
-2. Download [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads). Current Tensorflow only supports CUDA Toolkit 9.0. For different version, you will need to re-compile Tensorflow from the source. I currently use version 9.2.
-3. Download [cuDNN](https://developer.nvidia.com/rdp/cudnn-download). Membership registration is required. Choose the version depending on your operating system and CUDA Toolkit version. When extracting the files, remeber the *cuDNN path* to which you're extracting.
-4. Add the *cuDNN path* from previous step into __Environment PATH__. Tutorials of how to add to Environment PATH can be found online, you can follow this one. The path is as follow `(extract_path)\cuda\bin`
-    - Search for `environment variables` on Start menu.
-    - On __System Properties__ popup, click the last button __Environment Variables__.
-    - On __Environment Variables__ popup, in __System variables__ combobox, select __Path__ and hit the __Edit__ button.
-    - On __Edit environment variables__ popup, hit the __New__ button and copy/paste in *the said path*.
-    - Click __OK__ for any popups showing up to complete. *Note: If you hit __Cancel__ then you have to redo the steps*.
-5. Check if __PATH__ is added. Close all prompts then open a new Anaconda Prompt, enter the command below and see if the path is in the output result.\
-`echo %PATH%`
-6. Enter the command below to create an *environment* with the name `tensorflow` or your own choice.\
-`conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder cython`
-7. Enter the command below to activate the *environment*.\
-`activate tensorflow`
-8. Install __Tensorflow with GPU support__.
-    - If you installed CUDA Toolkit 9.0, enter the command below\
-    `pip install --ignore-installed --upgrade tensorflow-gpu`
-    - Otherwise, you have to re-build the Tensorflow binaries on your own *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
-        - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
-        - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
-        `pip install --ignore-installed --upgrade [the link]` 
-9. Wait for the installation to finish then jump to [Step 3](#step-3-verify-tensorflow-installation).
+1. __Open Anaconda Prompt__\
+Just search in the Start menu. *Note: This prompt is different from normal Command Prompt (cmd)*
+2. __(Optional) Create an *environment* for Tensorflow__\
+A [conda *environment*](https://conda.io/docs/user-guide/concepts.html#conda-environments) is a directory that contains a specific collection of conda packages that you have installed. If you change one environment, your other environments are not affected. You can easily switch between environments. You can also share your environment with someone by giving them a copy of yours.\
+    - Enter the command below to create an *environment* with the name `tensorflow`.\
+    `conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder cython`\
+    - Enter the command below to activate the *environment*.\
+    `activate tensorflow`
+3. __Install Tensorflow__
+    1. __CPU Version__
+    - Enter the command below to install. This will automatically select an official version from Google and install it for you.\
+    `pip install --ignore-installed --upgrade tensorflow`
+        - If you've installed Tensorflow but failed to import from [Step 3](#step-3-verify-tensorflow-installation), you have to re-compile Tensorflow from the source *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
+            - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
+            - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
+                `pip install --ignore-installed --upgrade [the link]`
+    2. __GPU Version__
+        1. __Check for supported GPU in [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda-gpus)__\
+        Make sure you find your GPU model in the lists and the __Compute Capability__ must be at least 3.0 or else you're out of luck.
+        2. __Download and install [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)__\
+        Current Tensorflow only supports CUDA Toolkit 9.0. For different version, you will need to re-compile Tensorflow from the source. I currently use version 9.2.
+        3. __Download and extract [cuDNN](https://developer.nvidia.com/rdp/cudnn-download)__\
+        Membership registration is required. Choose the version that suits your OS and CUDA Toolkit version. When extracting the files, remeber the *cuDNN path* to which you're extracting.
+        4. __Add the *cuDNN path* to Environment PATH__\
+        The path to add is as follow `(extract_path)\cuda\bin`. Tutorials can be found online, you can follow [this one](#add-to-environment-path). To check if PATH is added, close all prompts then open a new Anaconda Prompt and enter the command below and see if the path is in the output result.\
+        `echo %PATH%`
+        5. Install __Tensorflow with GPU support__.
+            - If you installed CUDA Toolkit 9.0, enter the command below\
+            `pip install --ignore-installed --upgrade tensorflow-gpu`
+            - Otherwise, you have to re-compile Tensorflow from the source *__OR__* follow this [step](#get-windows-tensorflow-wheel by-fo40225).                
+4. Wait for the installation to finish.
 ### Step 3. Verify Tensorflow installation
 1. From the current Anaconda Prompt, enter the command below to invoke Python:\
 `python`
@@ -76,5 +68,20 @@ In this project, I will guide you how to set up the environment for Python on Wi
 1. Make sure you are on Anaconda Prompt with *tensorflow environment* activated. Enter the command below to install Keras:\
 `pip install keras`
 2. Wait for the installation to complete.
+
+## Sub-Steps
+### Get [Windows Tensorflow Wheel by fo40225](https://github.com/fo40225/tensorflow-windows-wheel)
+1. Find a suitable `.whl` file in the [git](https://github.com/fo40225/tensorflow-windows-wheel).
+2. Copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
+3. Open Anaconda Prompt and activate the *environment* if neccessary.
+3. Enter the command below to install. Remember to replace `[the link]` with the modified link.\
+`pip install --ignore-installed --upgrade [the link]` 
+### Add to Environment Path
+1. Search for `environment variables` on Start menu.
+2. On __System Properties__ popup, click the last button __Environment Variables__.
+3. On __Environment Variables__ popup, in __System variables__ combobox, select __Path__ and hit the __Edit__ button.
+4. On __Edit environment variables__ popup, hit the __New__ button and copy/paste in *the path*.
+5. Click __OK__ for any popups showing up to complete.
+*Note: If you hit __Cancel__ then you have to redo the steps*.
 
 *__Please cite this repository if you find this helpful in your work. Thank you.__*
