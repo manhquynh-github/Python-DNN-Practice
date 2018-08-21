@@ -40,7 +40,7 @@ A [conda *environment*](https://conda.io/docs/user-guide/concepts.html#conda-env
         5. Install __Tensorflow with GPU support__.
             - If you installed CUDA Toolkit 9.0, enter the command below\
             `pip install --ignore-installed --upgrade tensorflow-gpu`
-            - Otherwise, you have to re-compile Tensorflow from the source *__OR__* follow this [step](#get-windows-tensorflow-wheel-by-fo40225).                
+            - Otherwise, you have to re-compile Tensorflow from the source *__OR__* follow [this step](#get-windows-tensorflow-wheel-by-fo40225).                
 4. Wait for the installation to finish.
 ### Step 3. Verify Tensorflow installation
 1. From the current Anaconda Prompt, enter the command below to invoke Python:\
@@ -54,7 +54,7 @@ A [conda *environment*](https://conda.io/docs/user-guide/concepts.html#conda-env
     ```
     - The `import tensorflow as tf` is to import Tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command.
         - If there's a warning __`Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`__. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
-        - If there's an error __`ImportError: DLL load failed`__, you've installed the wrong version of Tensorflow. For the right one, you have to re-compile Tensorflow from the source *__OR__* follow this [step](#get-windows-tensorflow-wheel-by-fo40225).
+        - If there's an error __`ImportError: DLL load failed`__, you've installed the wrong version of Tensorflow. For the right one, you have to re-compile Tensorflow from the source *__OR__* follow [this step](#get-windows-tensorflow-wheel-by-fo40225).
     - The `hello = tf.constant('Hello, TensorFlow!')` will create a simple variable using Tensorflow.
     - The `sess = tf.Session()` will create a session upon which Tensorflow will operate. If everything is correct, the prompt will tell you about the info of the CPU/GPU it will use. This will take some time to complete.
     - The `print(sess.run(hello))` will print out the value of `hello` which is supposed to be `b'Hello, TensorFlow!'`.
