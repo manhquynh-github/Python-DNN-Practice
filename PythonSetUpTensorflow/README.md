@@ -25,12 +25,8 @@ A [conda *environment*](https://conda.io/docs/user-guide/concepts.html#conda-env
     `activate tensorflow`
 3. __Install Tensorflow__
     1. __CPU Version__
-    - Enter the command below to install. This will automatically select an official version from Google and install it for you.\
-    `pip install --ignore-installed --upgrade tensorflow`
-        - If you've installed Tensorflow but failed to import from [Step 3](#step-3-verify-tensorflow-installation), you have to re-compile Tensorflow from the source *__OR__* find a compatible one in this very helpful [Git by fo40225](https://github.com/fo40225/tensorflow-windows-wheel).
-            - When you find the correct one, copy the *__link of the file__* and replace `/blob` from the link to `/raw`. The link should end with `.whl` file extenstion and contains no `/blob`.
-            - Enter the command below to install. Remember to replace `[the link]` with the modified link.\
-                `pip install --ignore-installed --upgrade [the link]`
+        - Enter the command below to install. This will automatically select an official version from Google and install it for you.\
+        `pip install --ignore-installed --upgrade tensorflow`
     2. __GPU Version__
         1. __Check for supported GPU in [NVIDIA CUDA GPUs](https://developer.nvidia.com/cuda-gpus)__\
         Make sure you find your GPU model in the lists and the __Compute Capability__ must be at least 3.0 or else you're out of luck.
@@ -57,8 +53,8 @@ A [conda *environment*](https://conda.io/docs/user-guide/concepts.html#conda-env
     print(sess.run(hello))
     ```
     - The `import tensorflow as tf` is to import Tensorflow. This line can take some time to complete. If everything is correct, nothing will show up and the prompt will wait for another command.
-        - If there is a warning __`Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`__. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
-        - If you failed with an error __`ImportError: DLL load failed`__, go back to [Step 2A](#step-2a).4 for more instructions.
+        - If there's a warning __`Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2`__. That means your CPU supports [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) but you've picked the wrong Tensorflow binary of which it was compiled to make use. You should run normally without any problems, but I recommend you use the correct one.
+        - If there's an error __`ImportError: DLL load failed`__, you've installed the wrong version of Tensorflow. For the right one, you have to re-compile Tensorflow from the source *__OR__* follow this [step](#get-windows-tensorflow-wheel-by-fo40225).
     - The `hello = tf.constant('Hello, TensorFlow!')` will create a simple variable using Tensorflow.
     - The `sess = tf.Session()` will create a session upon which Tensorflow will operate. If everything is correct, the prompt will tell you about the info of the CPU/GPU it will use. This will take some time to complete.
     - The `print(sess.run(hello))` will print out the value of `hello` which is supposed to be `b'Hello, TensorFlow!'`.
