@@ -17,7 +17,7 @@ In this project, I will guide you how to set up the environment for Python on Wi
 ### Step 2. Install Tensorflow
 1. __Open Anaconda Prompt__\
 Just search in the Start menu. *Note: This prompt is different from normal Command Prompt (cmd)*
-2. __(Optional) Create an *environment* for Tensorflow__
+2. __(Optional) Create an *environment* for Tensorflow__\
 A [conda *environment*](https://conda.io/docs/user-guide/concepts.html#conda-environments) is a directory that contains a specific collection of conda packages that you have installed. If you change one environment, your other environments are not affected. You can easily switch between environments. You can also share your environment with someone by giving them a copy of yours.
     - Enter the command below to create an *environment* with the name `tensorflow`.\
     `conda create -n tensorflow python=3.6 numpy scipy matplotlib spyder cython`
